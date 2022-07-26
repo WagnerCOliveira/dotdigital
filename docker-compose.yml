@@ -19,6 +19,8 @@ services:
     - "222:22"
     depends_on:
     - db
+    volumes:
+    - nfs_gitea_app:/data
 
   db:
     image: mysql:8         
@@ -29,6 +31,13 @@ services:
     - MYSQL_DATABASE: ${MYSQL_DATABASE}
     networks:
     - backend
+    volumes:
+    - nfs_gitea_db:/var/lib/mysql
 
 networks:
-  backend:    
+  frontend:
+  backend:
+    
+volumes:
+  nfs_gitea_app:
+  nfs_gitea_db:
