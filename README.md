@@ -23,7 +23,7 @@ Crie um repositório público (github por exemplo) contendo o passo-a-passo no f
 
 #### Criação .env
 Para o docker compose reconhecer as configurações de banco de dados é necessário ter o arquivo **.env** na raiz do projeto com as seguintes variaveis. 
-> Obs.: Colocar ums senha para o banco de dados e outra para o root do mysql.
+> Obs.: Colocar senha para o banco de dados e outra para o root do mysql.
 
 ~~~bash
 USER_UID=1000
