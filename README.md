@@ -22,6 +22,24 @@ Crie um repositório público (github por exemplo) contendo o passo-a-passo no f
 - [x] step-4: 
   - Aplique a persistência de dados para as duas aplicações. A organização em branches deve, por exemplo, possibilitar o uso das duas aplicações de forma efêmera no branch "step-3".
 
+#### Criação .env
+Para o docker compose reconhecer as configurações de banco de dados é necessário ter o arquivo **.env** na raiz do projeto com as seguintes variaveis. 
+> Obs.: Colocar senha para o banco de dados e outra para o root do mysql.
+
+~~~bash
+USER_UID=1000
+USER_GID=1000
+GITEA__database__DB_TYPE=mysql
+GITEA__database__HOST=db
+GITEA__database__NAME=gitea
+GITEA__database__USER=gitea
+GITEA__database__PASSWD=INSIRA_SENHA_PARA_BANCO_GITEA
+MYSQL_ROOT_PASSWORD=INSIRA_SENHA_PARA_ROOT_MYSQL
+MYSQL_USER=gitea
+MYSQL_PASSWORD=INSIRA_SENHA_PARA_BANCO_GITEA
+MYSQL_DATABASE=gitea
+~~~ 
+
 ### 🛠 Tecnologias Utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
