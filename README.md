@@ -21,6 +21,25 @@ Crie um repositório público (github por exemplo) contendo o passo-a-passo no f
 - [x] step-1: 
   - Serviços comuns a todas as aplicações (db, proxy etc);
 
+
+#### Criação .env
+Para o docker compose reconhecer as configurações de banco de dados é necessário ter o arquivo **.env** na raiz do projeto com as seguintes variaveis. 
+> Obs.: Colocar ums senha para o banco de dados e outra para o root do mysql.
+
+~~~bash
+USER_UID=1000
+USER_GID=1000
+GITEA__database__DB_TYPE=mysql
+GITEA__database__HOST=db
+GITEA__database__NAME=gitea
+GITEA__database__USER=gitea
+GITEA__database__PASSWD=INSIRA_SENHA_PARA_BANCO_GITEA
+MYSQL_ROOT_PASSWORD=INSIRA_SENHA_PARA_ROOT_MYSQL
+MYSQL_USER=gitea
+MYSQL_PASSWORD=INSIRA_SENHA_PARA_BANCO_GITEA
+MYSQL_DATABASE=gitea
+~~~ 
+
 ### 🛠 Tecnologias Utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
